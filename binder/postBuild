@@ -1,4 +1,21 @@
 #!/bin/bash
+sh -c "$(curl -sSL https://sh.rustup.rs)"
 
-sh -c "$(yes | curl -sSL https://sh.rustup.rs)"
+pip install pyngrok
+
+mdbook build
+
+mdbook serve & 
+
+ngrok http 3000
+
+
+
+
+
+
+
+
+
+
 
