@@ -10,11 +10,6 @@ cargo install mdbook
 
 mdbook build
 
-mdbook serve & 
-
-ngrok http 3000
-
-
 
 
 
