@@ -7,6 +7,12 @@
 
 Learn Rust with examples (Live code editor included)
 
+## Quick Rust Installation 
+
+```bash
+curl https://sh.rustup.rs -sSf | sh
+```
+
 ## Using
 
 If you'd like to read Rust by Example, you can visit <https://doc.rust-lang.org/rust-by-example/>
