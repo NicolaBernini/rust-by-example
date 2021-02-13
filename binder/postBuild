@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sh -c "$(yes | curl -sSL https://sh.rustup.rs)"
+
