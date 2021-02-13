@@ -3,6 +3,8 @@ sh -c "$(curl -sSL https://sh.rustup.rs)"
 
 pip install pyngrok
 
+cargo install mdbook
+
 mdbook build
 
 mdbook serve & 
