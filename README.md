@@ -2,6 +2,8 @@
 
 [![Build Status][travis-badge]][travis-repo]
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NicolaBernini/rust-by-example/HEAD)
+
 [travis-badge]: https://travis-ci.com/rust-lang/rust-by-example.svg?branch=master
 [travis-repo]: https://travis-ci.com/rust-lang/rust-by-example
 
