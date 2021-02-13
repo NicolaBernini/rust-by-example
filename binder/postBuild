@@ -1,5 +1,6 @@
 #!/bin/bash
-sh -c "$(curl -sSL https://sh.rustup.rs)"
+
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 pip install pyngrok
 
