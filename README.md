@@ -9,11 +9,54 @@
 
 Learn Rust with examples (Live code editor included)
 
-## Quick Rust Installation 
+## Running it on Binder 
+
+Before starting, make sure you have [Ngrok](https://ngrok.com/) token since it will be used to tunnel the Binder localhost to a public ip 
+
+1. Click the Binder Icon Above 
+2. Serve the book with 
 
 ```bash
-curl https://sh.rustup.rs -sSf | sh
+$ mdbook serve & 
 ```
+
+- this will run the web server serving the book locally in the Binder VM on port 3000
+
+3. Set the ngrok token 
+
+```bash
+$ ngrok authtoken MY_TOKEN
+```
+
+
+4. Start the ngrok tunnel 
+
+```bash
+$ ngrok http 3000
+```
+
+This will produce something like 
+
+```bash
+ngrok by @inconshreveable                                                                                  (Ctrl+C to quit)
+
+Session Status                online
+Account                       Nicola Bernini (Plan: Free)
+Version                       2.3.35
+Region                        United States (us)
+Web Interface                 http://127.0.0.1:4040
+Forwarding                    http://9f3348fc6ce7.ngrok.io -> http://localhost:3000
+Forwarding                    https://9f3348fc6ce7.ngrok.io -> http://localhost:3000
+
+Connections                   ttl     opn     rt1     rt5     p50     p90
+                              38      0       0.00    0.01    1.61    17.29
+```
+
+
+5. Enjoy the book 
+
+Connecting to http://9f3348fc6ce7.ngrok.io 
+
 
 ## Using
 
@@ -34,89 +77,6 @@ $ mdbook serve
 
 To be able to run the examples, you must be connected to the internet; you can
 read all content offline, however!
-
-
-
-## Run it on Binder 
-
-Before starting, I am assuming you have an [Ngrok](https://ngrok.com/) token 
-
-1. Go to [MyBinder](https://mybinder.org/)
-2. Launch MyBinder with this repo 
-3. Open a console 
-4. Install Rust 
-
-```bash
-curl https://sh.rustup.rs -sSf | sh
-```
-
-
-5. Install ngrok
-
-```bash
-pip install pyngrok
-ngrok help
-```
-
-
-6. Build the book 
-
-```bash
-mdbook build
-```
-
-
-7. Serve the book 
-
-```bash
-mdbook serve & 
-```
-
-This should serve the book at http://localhost:3000/ but since it is localhost you can't access it directly, you need to build a tunnel to a public IP and for this we use ngrok 
-
-
-8. Run the ngrok tunneling 
-
-```bash
-ngrok http 3000
-```
-
-You should see something like 
-
-```bash
-ngrok by @inconshreveable                                                                                  (Ctrl+C to quit)
-
-Session Status                online
-Account                       Nicola Bernini (Plan: Free)
-Version                       2.3.35
-Region                        United States (us)
-Web Interface                 http://127.0.0.1:4040
-Forwarding                    http://9f3348fc6ce7.ngrok.io -> http://localhost:3000
-Forwarding                    https://9f3348fc6ce7.ngrok.io -> http://localhost:3000
-
-Connections                   ttl     opn     rt1     rt5     p50     p90
-                              38      0       0.00    0.01    1.61    17.29
-```
-
-
-
-9. Access the book by connecting to the link 
-
-For example 
-
-http://9f3348fc6ce7.ngrok.io/variable_bindings/scope.html
-
-and in the ngrok logs you should see something like 
-
-
-```bash
-HTTP Requests
--------------
-
-GET /favicon.svg                                   200 OK
-GET /favicon.png                                   200 OK
-GET /fonts/open-sans-v17-all-charsets-italic.woff2 200 OK
-```
 
 
 ## Contributing
